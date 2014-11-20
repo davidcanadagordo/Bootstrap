@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>GitHub Example</title>
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+
+    </head>
+    <body>
+	  <body background ="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTvyS05-CLYG4HJxJIK28VVMe5khLTuh3mhDxw0HTlU-e2O3-2YOrtB7ko">
+      <div class="container theme-showcase" role="main">
+       
+		<div class="col-sm-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiD5V9TeroGsLCA4urgFDJSfWrJdENcM5MzX3VJ2vqNQu1UX0abA" class="img-rounded">
+            </div>
+            <div class="col-sm-8">
+			 <div class="page-header">
+			   <h1><font color="black">Ejemplo Prueba</font>
+             <!--  <h1><br>Ejemplo Prueba</h1>-->
+			   <body background-color =" #333333">
+			   
+             </div>
+		</div>
+	   	
+
+	<!-- PRIMERA SECCION>
+	
+       <!-- <div class="page-header"
+          <h1>Repositories</h1>
+        </div>-->
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Consultar Listado Gits</h3>
+              </div>
+              <div class="panel-body">
+                 <span id="get_result"></span>
+				 
+              </div>
+			  
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-primary" id="button_get">Consultar</button>
+			
+          </div>
+        </div>
+
+    <!-- SEGUNDA SECCION-->
+		
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Consultar por id</h3>
+              </div>
+              <div class="panel-body">
+                 <span id="get_consultar"></span>
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-primary" id="button_consultar">Consultar</button>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon">id</span> 
+              <input type="text" class="form-control" id="gist_id">
+            </div>
+          </div>
+        </div>
+
+		
+	<!-- TERCERA SECCION-->
+		
+		
+		
+		  <div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Crear Gist</h3>
+              </div>
+              <div class="panel-body">
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Files</span> <input type="textbox" class="form-control" id="create_files">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Description</span> <input type="textbox" class="form-control" id="create_description">
+                </div>
+				
+				 
+				
+                <span id="create_result"></span>
+
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+           <div class="col-sm-4">
+            <button type="button" class="btn btn-warning" id="button_crear">Crear</button>
+            
+          </div>
+        </div>
+
+
+      <!-- CUARTA SECCION--> 
+	  
+	  <div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Borrar</h3>
+              </div>
+              <div class="panel-body">
+                 <span id="get_borrar"></span>
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-danger" id="button_borrar">Borrar</button>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon">id</span> 
+              <input type="text" class="form-control" id="gist_borrar">
+            </div>
+          </div>
+        </div>
+	  
+	  
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Editar</h3>
+              </div>
+              <div class="panel-body">
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Description</span> <input type="textbox" class="form-control" id="edit_description">
+                </div>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-addon">Content</span> <input type="textbox" class="form-control" id="edit_content">
+                </div>
+
+                <span id="edit_result"></span>
+
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info" id="button_edit">Editar</button>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon">id</span> 
+              <input type="text" class="form-control" id="id_edit_gist">
+            </div>
+            <button type="button" class="btn btn-info" id="button_save">Guardar</button>
+          </div>
+        </div>
+   
+   <!-- PAGINACION-->
+   
+		 <div class="row">
+          <div class="col-sm-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Paginar consulta listado</h3>
+              </div>
+              <div class="panel-body">
+                 <span id="get_paginar"></span>
+              </div>
+            </div>
+          </div><!-- /.col-sm-8 -->
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-primary" id="button_paginar">Ir</button>
+			
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon">Página</span> 
+              <input type="text" class="form-control" id="gist_pagina">
+			  <span class="input-group-addon">Resultados</span>
+			  <input type="text" class="form-control" id="gist_resultados">
+			  
+            </div>
+          </div>
+        </div>
+	  
+
+       </div>
+	          
+	   
+
+        
+
+
+
+
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+      <!-- Event and AJAX functions -->
+      <script type="text/javascript" src="prueba.js"></script>
+    </body>
+  </html>
